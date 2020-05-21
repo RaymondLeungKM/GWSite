@@ -1,0 +1,27 @@
+{% extends 'GWHK/base.html' %}
+
+{% block content %}
+    <h2 style="color: red"><strong>{{ companynews_details.title }}</strong></h2>
+    <p class="text-muted text-right" style="font-size:0.9rem">{{ companynews_details.published_date | date:"Y-m-d"}}</p>
+    <img class="header-image" src="{{ companynews_details.image.url }}" alt="com_image">
+    <p>{{ companynews_details.content | safe }}</p>
+    <div class="page-nav">
+        {% if companynews_details.get_previous_by_published_date %}
+            <a href="{% url 'companyNewsDetail' pk=companynews_details.get_previous_by_published_date.pk %}" class="btn btn-secondary">上一則: {{companynews_details.get_previous_by_published_date}}</a>
+        {% else %}
+            <p class="text-muted">(第一頁)</p>
+        {% endif %}
+
+        {% if companynews_details.get_next_by_published_date %}
+            <a href="{% url 'companyNewsDetail' pk=companynews_details.get_next_by_published_date.pk %}" class="btn btn-light">下一則: {{companynews_details.get_next_by_published_date}}</a>
+        {% else %}
+            <p class="text-muted">(最後一頁)</p>
+        {% endif %}
+    </div>
+    <hr>
+    <div class="home-btn">
+        <a href="{% url 'companyNewsList' %}" class="btn btn-primary">回主目錄</a>
+    </div>
+
+
+{% endblock %}

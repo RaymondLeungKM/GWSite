@@ -1,0 +1,26 @@
+{% extends 'GWHK/base.html' %}
+
+{% block content %}
+<h2>新聞稿</h2>
+<ol>
+    <table class="table table-striped" data-toggle="table" data-pagination="true" style="width:100%">
+        <thead>
+            <tr>
+                <th>標題</th>
+                <th>發佈日期</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pressrelease in pressrelease_list %}
+            <tr>
+                <td><a href="{% url 'pressReleaseDetail' pk=pressrelease.pk %}">{{ pressrelease.title }}</a></td>
+                <td>{{ pressrelease.published_date | date:"Y-m-d" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</ol>
+
+
+{% endblock %}

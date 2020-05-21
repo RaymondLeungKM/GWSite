@@ -1,0 +1,22 @@
+{% extends 'GWHK/base.html' %}
+
+{% block content %}
+<h2>職位空缺:</h2>
+<table class="table table-striped" style="width:100%">
+    <tr>
+        <th scope="col">Job Title</th>
+        <th scope="col">Job Responsibilities</th>
+        <th scope="col">Job Requirements</th>
+        <th scope="col">Download PDF</th>
+    </tr>
+    {% for jobopening in jobopenings_list %}
+    <tr>
+        <td>{{ jobopening.jobTitle | safe }}</td>
+        <td>{{ jobopening.jobRespons |safe }}</td>
+        <td>{{ jobopening.jobRequirements |safe }}</td>
+        <td><a href="{{ jobopening.jobPDF.url }}" target="_blank" class="btn btn-primary"><i class="fas fa-download"></i>Download PDF</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'GWHK/base.html' %}
+
+{% block content %}
+<h2>集團消息</h2>
+<ol>
+    <table class="table table-striped" data-toggle="table" data-pagination="true" style="width:100%">
+        <thead>
+            <tr>
+                <th>標題</th>
+                <th>發佈日期</th>
+            </tr>
+        <tbody>
+            {% for comnews in companynews_list %}
+            <tr>
+                <td><a href="{% url 'companyNewsDetail' pk=comnews.pk %}">{{ comnews.title }}</a></td>
+                <td>{{ comnews.published_date | date:"Y-m-d" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        </thead>
+    </table>
+
+</ol>
+
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% load static %}
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/GW_Group_logo.png' %}" alt="gw-logo" width="210px" height="60px"></a>
+  <img src="{% static 'images/top_03.gif' %}" alt="license_logo" width="210px" height="70px">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          集團概覽
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'companyInfo' %}">集團介紹</a>
+          <a class="dropdown-item" href="{% url 'visionValues' %}">集團願景及理念</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          金道業務
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'stockInvest' %}">證券投資</a>
+          <a class="dropdown-item" href="#">資產管理</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          集團新聞
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'pressReleaseList' %}">新聞稿</a>
+          <a class="dropdown-item" href="{% url 'companyNewsList' %}">集團消息</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          加入集團
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'companyCulture' %}">團隊文化</a>
+          <a class="dropdown-item" href="{% url 'jobOpeningsList' %}">人才招募</a>
+        </div>
+      </li>
+      <li>
+        <a class="nav-link" href="{% url 'contactUs' %}">聯絡集團</a>
+      </li>
+    </ul>
+  </div>
+</nav>

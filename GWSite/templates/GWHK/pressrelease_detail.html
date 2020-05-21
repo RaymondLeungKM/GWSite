@@ -1,0 +1,8 @@
+{% extends 'GWHK/base.html' %}
+
+{% block content %}
+<h2>{{ pressrelease_details.title }}</h2>
+<p class="text-muted text-right" style="font-size:0.9rem">{{ pressrelease_details.published_date }}</p>
+<p>{{ pressrelease_details.content | safe }}</p>
+
+{% endblock %}
