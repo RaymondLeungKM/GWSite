@@ -14,5 +14,6 @@ urlpatterns = [
     path('pressRelease/<int:pk>/', views.pressReleaseDetail.as_view(), name='pressReleaseDetail'),    
     path('jobOpenings', views.jobOpeningsList.as_view(), name='jobOpeningsList'),
     path('contactus', views.contactUs, name='contactUs'),
-    path('stockInvest', views.stockInvest, name='stockInvest'),    
+    path('stockInvest', views.stockInvest, name='stockInvest'),
+    path('assetMgt', views.assetMgt, name='assetMgt'),     
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -20,6 +20,9 @@ def companyCulture(request):
 def stockInvest(request):
 	return render(request, 'GWHK/stockinvest.html')
 
+def assetMgt(request):
+	return render(request, 'GWHK/assetMgt.html')
+
 class companyNewsDetail(DetailView):
 	context_object_name = 'companynews_details'
 	model = companyNews

@@ -1,7 +1,7 @@
 {% load static %}
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/GW_Group_logo.png' %}" alt="gw-logo" width="210px" height="60px"></a>
-  <img src="{% static 'images/top_03.gif' %}" alt="license_logo" width="210px" height="70px">
+  <!-- <img src="{% static 'images/top_03.gif' %}" alt="license_logo" width="210px" height="70px"> -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -22,7 +22,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="{% url 'stockInvest' %}">證券投資</a>
-          <a class="dropdown-item" href="#">資產管理</a>
+          <a class="dropdown-item" href="{% url 'assetMgt' %}">資產管理</a>
         </div>
       </li>
       <li class="nav-item dropdown">

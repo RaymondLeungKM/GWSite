@@ -3,30 +3,30 @@
 
 {% block content %}
 <h2>集團願景及理念</h2>
-<div class="card">
-    <h5 class="card-header">集團願景</h5>
-    <div class="card-body">
-        <img class="card-image round-image" src="https://www.gwghk.com/tw/images/jh_07.png" alt="">
-        <p class="card-text">金道集團致力於通過建立完備的業務體系、一流的交易平臺、高效的管理結構和堅實的客戶基礎，成為核心競爭力突出、品牌知名度高的綜合性國際化金融服務集團。金道人將戮力同心、矢志不渝，以期達成目標。</p>
+    <div class="card card-page">
+        <h5><span class="reveal-img">集團願景</span></h5>
+        <div class="card-body card-p reveal-text">
+            <img class="card-image round-image" src="https://www.gwghk.com/tw/images/jh_07.png" alt="">
+            <p class="card-text">金道集團致力於通過建立完備的業務體系、一流的交易平臺、高效的管理結構和堅實的客戶基礎，成為核心競爭力突出、品牌知名度高的綜合性國際化金融服務集團。金道人將戮力同心、矢志不渝，以期達成目標。</p>
+        </div>
     </div>
+    <div class="card card-page">
+        <h5><span class="reveal-img">集團使命</span></h5>
+        <div class="card-body card-p reveal-text">
+            <img class="card-image round-image" src="https://www.gwghk.com/tw/images/jh01.png" alt="">
+            <h5 class="card-title">金道集團致力於為環球客戶提供優質的金融服務，推動行業發展，助力金融改革。</h5>
+            <ul>
+                <li class="card-text">為客戶：提供多元化投資管道，滿足其全球資產配置需求，提升理財便利度及專業度；</li>
+                <li class="card-text">為市場：高度自律，嚴守法規，幫助形成互聯網金融行業誠信透明的良好形象，推動其
+                    長期健康的發展；</li>
+                <li class="card-text">為經濟：在產品開發及金融創新方面做探路者，優化資源配置效率，服務實體經濟，推
+                    動中國的金融改革。</li>
+            </ul>
+        </div>
     </div>
-    <div class="card">
-    <h5 class="card-header">集團使命</h5>
-    <div class="card-body">
-        <img class="card-image round-image" src="https://www.gwghk.com/tw/images/jh01.png" alt="">
-        <h5 class="card-title">金道集團致力於為環球客戶提供優質的金融服務，推動行業發展，助力金融改革。</h5>
-        <ul>
-            <li class="card-text">為客戶：提供多元化投資管道，滿足其全球資產配置需求，提升理財便利度及專業度；</li>
-            <li class="card-text">為市場：高度自律，嚴守法規，幫助形成互聯網金融行業誠信透明的良好形象，推動其
-                長期健康的發展；</li>
-            <li class="card-text">為經濟：在產品開發及金融創新方面做探路者，優化資源配置效率，服務實體經濟，推
-                動中國的金融改革。</li>
-        </ul>
-    </div>
-    </div>
-    <div class="card">
-    <h5 class="card-header">價值觀</h5>
-    <div class="card-body">
+    <div class="card card-page">
+    <h5><span class="reveal-img">價值觀</span></h5>
+    <div class="card-body card-p reveal-text">
         <img class="card-image round-image" src="https://www.gwghk.com/tw/images/jh02.png" alt="">
         <ul>
             <li class="card-text">公平：嚴格遵守監管條例，加強內部審計，致力於提供客戶信賴的公平的交易方式</li>
@@ -38,9 +38,9 @@
         </ul>
     </div>
     </div>
-    <div class="card">
-    <h5 class="card-header">公司文化</h5>
-    <div class="card-body">
+    <div class="card card-page">
+    <h5><span class="reveal-img">公司文化</span></h5>
+    <div class="card-body card-p reveal-text">
         <img class="card-image round-image" src="https://www.gwghk.com/tw/images/jh03.png" alt="">
         <h5 class="card-title">金道集團崇尚人文關懷和社會責任感。</h5>
         <ul>
@@ -53,4 +53,28 @@
     </div>
     <br>
 
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="https://unpkg.com/@barba/core"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
+  integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c="
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"
+  integrity="sha256-XBVALc3QsDSQiDtiaBwNZ2rxCJTHzlUhhlDQ84J8bw8="
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"
+  integrity="sha256-+9YNuItWuR4sbqeaNiJOxG0BvptYz4fbUXbIZoH5Jwo="
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"
+  integrity="sha256-3arngJBQR3FTyeRtL3muAGFaGcL8iHsubYOqq48mBLw="
+  crossorigin="anonymous"
+></script>
 {% endblock %}

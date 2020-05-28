@@ -1,8 +1,33 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
+#logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  stroke-linecap: round;
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+
 * {
-  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 html {
@@ -11,23 +36,23 @@ html {
 }
 
 body {
-    padding-bottom: 3rem;
-    background-image: url(https://www.gwghk.com/tw/images/bg_img.jpg);
-    margin-bottom: 160px !important; /* Margin bottom by footer height */
-  }
+  padding-bottom: 3rem;
+  background-image: url(https://www.gwghk.com/tw/images/bg_img.jpg);
+  margin-bottom: 160px !important; /* Margin bottom by footer height */
+}
 
-h1{
+h1 {
   font-weight: bolder;
 }
 
-.header-image{
+.header-image {
   display: flex;
   margin: auto;
   padding-bottom: 50px;
   max-width: 100%;
 }
 
-.header-image2{
+.header-image2 {
   display: flex;
   margin: auto;
   justify-content: space-around;
@@ -42,21 +67,25 @@ h1{
   width: 100%;
   height: 190px; /* Set the fixed height of the footer here */
   line-height: 20px; /* Vertically center the text there */
-  background-color: #f5f5f5;
+  background-color: #000000;
 }
 
-.card-image{
+.footer-nav{
+  color:rgb(255, 255, 255);
+}
+
+.card-image {
   display: flex;
   margin: auto;
 }
 
-.info-p{
+.info-p {
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
 }
 
-.info-image{
+.info-image {
   display: flex;
   margin: auto;
   padding-bottom: 50px;
@@ -68,7 +97,6 @@ h1{
   font-weight: bolder;
 }
 
-
 .navbar-nav > li > div {
   margin: 0;
   padding: 0;
@@ -76,7 +104,7 @@ h1{
   border-radius: 10px;
 }
 
-.navbar-nav > li > div > a:hover{
+.navbar-nav > li > div > a:hover {
   background-color: rgb(250, 180, 51);
   color: white;
   font-size: 1.1rem;
@@ -86,11 +114,11 @@ h1{
 
 @media (min-width: 992px) {
   .dropdown:hover .dropdown-menu {
-      display: block;
+    display: block;
   }
 }
 
-.card-home{
+.card-home {
   display: flex !important;
   align-items: center;
   justify-content: space-between;
@@ -100,7 +128,7 @@ h1{
   transition: all 0.5s ease;
 }
 
-.card-home:hover{
+.card-home:hover {
   transform: scale(1.1);
   border: 3px solid rgb(255, 201, 170);
 }
@@ -110,69 +138,158 @@ h1{
   height: auto;
 }
 
-.card-img-top{
+.card-img-top {
   border-top-left-radius: 20px !important;
   border-top-right-radius: 20px !important;
 }
 
-.page-nav{
+.page-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.home-btn{
+.home-btn {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.t-a{
+.t-a {
   min-width: 120px;
   color: rgb(0, 163, 0);
   font-weight: bold;
 }
 
-div > h2{
+div > h2 {
   color: green;
   font-weight: bold;
 }
 
-.round-image{
+.round-image {
   padding-bottom: 20px;
   transition: all 0.5s ease;
 }
 
-.round-image:hover{
+.round-image:hover {
   transform: scale(1.1);
 }
 
-.jumbotron{
+.jumbotron {
   background-color: white !important;
 }
-  /* CUSTOMIZE THE CAROUSEL
+/* CUSTOMIZE THE CAROUSEL
   -------------------------------------------------- */
-  
-  /* Carousel base class */
-  .carousel {
-    margin-bottom: 4rem;
-  }
-  /* Since positioning the image, we need to help out the caption */
-  .carousel-caption {
-    bottom: 3rem;
-    z-index: 10;
-  }
-  
-  /* Declare heights because of positioning of img element */
-  .carousel-item {
-    height: 48rem;
-    background-color: #777;
-  }
-  .carousel-item > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    height: 48rem;
-    opacity: 60%;
-  }
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 48rem;
+  background-color: #777;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 48rem;
+  opacity: 60%;
+}
+
+.carousel .carousel-indicators li {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+
+/*for the animation part */
+
+.card-page {
+  width: 100%;
+  height: 70vh;
+  padding-top: 50px;
+  border: none !important;
+}
+
+.card-p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reveal-text {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  left: 0%;
+  opacity: 0;
+}
+
+.reveal-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  opacity: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.scrollmagic-pin-spacer {
+  position: static !important;
+}
+
+/*navbar thing*/
+body {
+  padding-top: 50px;
+}
+*{
+    transition: all 0.3s;}
+nav a {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  font-size: 18px;
+}
+.navbar-inverse{
+    background-color:#f00;
+    }
+nav .navbar-toggle {
+  margin: 13px 15px 13px 0;
+}
+
+.navbar-brand {
+  font-size: 30px;
+}
+
+
+
+nav.navbar.shrink {
+  min-height: 35px;
+}
+
+nav.shrink a {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  font-size: 15px;
+}
+
+nav.shrink .navbar-brand {
+  font-size: 25px;
+}
+
+nav.shrink .navbar-toggle {
+  padding: 4px 5px;
+  margin: 8px 15px 8px 0;
+}
