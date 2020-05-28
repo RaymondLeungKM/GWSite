@@ -1,7 +1,3 @@
-// gsap.fromTo(".card-page", { opacity: 0 }, { duration: 3, opacity: 1 });
-
-// gsap.fromTo(".card-page", { x: "-100%" }, { duration: 3, x: "0%" });
-
 let controller;
 let slideScene;
 
@@ -18,7 +14,7 @@ function animateSlides() {
     slideTl.fromTo(revealText, { scale: "0.9", opacity: "0" }, { scale: "1", opacity:"1" });
     slideScene = new ScrollMagic.Scene({
       triggerElement: slide,
-      triggerHook: 0.2,
+      triggerHook: 0.6,
       reverse: false,
     })
       .setTween(slideTl)

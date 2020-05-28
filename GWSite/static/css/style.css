@@ -1,25 +1,55 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
+.f_svg{
+  height: 100vh;
+  background-color:darkslateblue;
+}
+
 #logo {
   position: absolute;
-  top: 50%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  stroke-linecap: round;
+}
+
+#logo2 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  stroke-linecap: round;
+}
+
+#logo3 {
+  position: absolute;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   stroke-linecap: round;
 }
 
 @keyframes line-anim {
-  to {
-    stroke-dashoffset: 0;
+  to{
+      stroke-dashoffset: 0;
   }
 }
 @keyframes fill {
   from {
-    fill: transparent;
+      fill: transparent;
   }
   to {
-    fill: white;
+      fill: white;
+  }
+}
+
+@keyframes fill3 {
+  from {
+      fill: transparent;
+  }
+  to {
+      fill: #00BE35;
   }
 }
 
@@ -36,7 +66,7 @@ html {
 }
 
 body {
-  padding-bottom: 3rem;
+  /* padding-bottom: 3rem; */
   background-image: url(https://www.gwghk.com/tw/images/bg_img.jpg);
   margin-bottom: 160px !important; /* Margin bottom by footer height */
 }
@@ -91,24 +121,25 @@ h1 {
   padding-bottom: 50px;
 }
 
+.navbar-nav > li > a {
+  border-bottom: 3px solid transparent;
+  padding-top: 0;
+}
+
 .navbar-nav > li:hover > a {
   border-bottom: 3px solid red;
-  font-size: 1.1rem;
-  font-weight: bolder;
+  padding-top: 0;
 }
 
 .navbar-nav > li > div {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   border-radius: 10px;
 }
 
 .navbar-nav > li > div > a:hover {
   background-color: rgb(250, 180, 51);
   color: white;
-  font-size: 1.1rem;
-  font-weight: bold;
   border-radius: 10px;
 }
 
@@ -162,7 +193,7 @@ h1 {
 }
 
 div > h2 {
-  color: green;
+  color: rgb(31, 255, 31);
   font-weight: bold;
 }
 
@@ -276,7 +307,8 @@ nav .navbar-toggle {
 
 
 nav.navbar.shrink {
-  min-height: 35px;
+  min-height: 25px;
+  background-color:rgb(57, 255, 57) !important;
 }
 
 nav.shrink a {

@@ -93,8 +93,7 @@ h1 {
 
 .navbar-nav > li:hover > a {
   border-bottom: 3px solid red;
-  font-size: 1.1rem;
-  font-weight: bolder;
+  box-sizing: border-box;
 }
 
 .navbar-nav > li > div {
@@ -162,7 +161,7 @@ h1 {
 }
 
 div > h2 {
-  color: green;
+  color: rgb(31, 255, 31);
   font-weight: bold;
 }
 
@@ -276,7 +275,8 @@ nav .navbar-toggle {
 
 
 nav.navbar.shrink {
-  min-height: 35px;
+  min-height: 25px;
+  background-color:green !important;
 }
 
 nav.shrink a {

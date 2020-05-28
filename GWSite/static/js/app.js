@@ -8,13 +8,13 @@ function animateSlides() {
     const revealImg = slide.querySelector(".reveal-img");
     const revealText = slide.querySelector(".reveal-text");
     const slideTl = gsap.timeline({
-      defaults: { duration: 1, ease: "power2.out" },
+      defaults: { duration: 0.8, ease: "power2.out" },
     });
-    slideTl.fromTo(revealImg, { scale: "0.9", opacity: "0" }, { scale: "1", opacity:"1" },"+=0.5");
+    slideTl.fromTo(revealImg, { scale: "0.9", opacity: "0" }, { scale: "1", opacity:"1" });
     slideTl.fromTo(revealText, { scale: "0.9", opacity: "0" }, { scale: "1", opacity:"1" });
     slideScene = new ScrollMagic.Scene({
       triggerElement: slide,
-      triggerHook: 0.2,
+      triggerHook: 0.6,
       reverse: false,
     })
       .setTween(slideTl)
@@ -57,3 +57,41 @@ $(window).scroll(function() {
     $('nav').removeClass('shrink');
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  function animateSgv (id, anim_time, delay, delayIncrement){
+      const logo = document.getElementById(id);
+      const logoPaths = document.querySelectorAll(`#${id} path`);
+      delay = delay;
+      for(let i = 0; i < logoPaths.length;i++){
+          //console.log(logoPaths[i].getTotalLength());
+          logoPaths[i].style.strokeDasharray  = logoPaths[i].getTotalLength();
+          logoPaths[i].style.strokeDashoffset = logoPaths[i].getTotalLength();
+          logoPaths[i].style.animation = `line-anim ${anim_time}s ease forwards ${delay}s`;
+          delay+=delayIncrement;
+          console.log(delay)
+      }
+      logo.style.animation = `fill 0.5s ease forwards ${delay}s`;
+  }
+  animateSgv('logo', 1.5, 0, 0.43)
+  animateSgv('logo2', 15, 0, 3.1)
+}, false);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  function animateSgv2 (id, delay, delayIncrement){
+      const logo = document.getElementById(id);
+      const logoPaths = document.querySelectorAll(`#${id} path`);
+      delay = delay;
+      for(let i = 0; i < logoPaths.length;i++){
+          //console.log(logoPaths[i].getTotalLength());
+          logoPaths[i].style.strokeDasharray  = logoPaths[i].getTotalLength();
+          logoPaths[i].style.strokeDashoffset = logoPaths[i].getTotalLength();
+          logoPaths[i].style.animation = `line-anim 8s ease forwards ${delay}s`;
+          delay+=delayIncrement;
+          console.log(delay)
+      }
+      logo.style.animation = `fill3 0.5s ease forwards ${delay}s`;
+  }
+  animateSgv2('logo3', 0, 6)
+}, false);
